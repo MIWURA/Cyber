@@ -60,12 +60,12 @@ p3 = aes_decrypt(aes_key, aes_iv, c1)
 assert unpad(p3) == 'abc'.encode('utf8')
 
 aes_encrypt_file(aes_key, aes_iv, 'sample.jpg', 'sample.jpg.enc')
-aes_decrypt_file(aes_key, aes_iv, 'sample.jpg.enc', 'sample1.jpg')
-assert filecmp.cmp('sample.jpg', 'sample1.jpg')
+aes_decrypt_file(aes_key, aes_iv, 'sample.jpg.enc')
+assert filecmp.cmp('sample.jpg')
 
 aes_encrypt_file(aes_key, aes_iv, 'sample.txt', 'sample.txt.enc')
-aes_decrypt_file(aes_key, aes_iv, 'sample.txt.enc', 'sample1.txt')
-assert filecmp.cmp('sample.txt', 'sample1.txt')
+aes_decrypt_file(aes_key, aes_iv, 'sample.txt.enc')
+assert filecmp.cmp('sample.txt')
 
 save_local_key(aes_key, aes_iv, rsa_public_key, 'LocalKey')
 loaded_aes_key, loaded_aes_iv = load_local_key(rsa_private_key, 'LocalKey')
