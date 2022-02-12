@@ -1,9 +1,10 @@
 # Cyber
 How to Run Baby Ransomware
 
-run file baby_ransomware.py choose mode 1 or 2
-when you choose mode 2 , program ask: Paste RSA Private Key and Press Enter:
-copy private key in file baby_ransomware_test.py past in command line
+1. run file baby_ransomware.py choose mode 1 will a create file localkey
+2. when you choose mode 2 , program ask: Paste RSA Private Key and Press Enter:
+3. copy private key in file baby_ransomware_test.py past in command line click Enter
+4. program run successfully
 
 โปรแกรมจะไม่ถามชื่อไฟล์ที่จะเข้ารหัส หรือถอดรหัสนะคะ เพราะโจทย์สั่งไว้ว่า "ระบุชื่อไฟล์เป้าหมายที่แน่นอนในโปรแกรม"
 ไฟล์ localkey ถูกเข้ารหัสด้วย rsa public key จึงเปิดอ่านไม่ได้ ตามที่เข้าใจนะ
